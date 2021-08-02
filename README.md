@@ -1,7 +1,6 @@
 # fzf-better-alt-c
 A script that simulates fzf alt-c excluding directories from `./.ignore`
 
-there is something different for deifferent shells, so this script is only for zsh. You can modified it since it's so easy to fit yours.
 
 ## Intro:
 
