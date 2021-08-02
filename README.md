@@ -35,7 +35,7 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 
 I simply add `*` to the front and end string read from `./.ignore` to form patterns, so it **will not** act like `./.gitignore` or `rg` .
 
-
+## Note
 
 More about the default `FZF_ALT_C_COMMAND`  (part of it)
 
