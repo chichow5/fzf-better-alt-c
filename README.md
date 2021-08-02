@@ -14,11 +14,18 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 2. Add one line in `.bashrc` if you use `bash` or `.zshrc` if you use `zsh` ,etc;
 
    ```shell
-   bindkey -s '^[c' 'source /path_to_your_script/cddir^M'
+   source path_to_script/cddir.sh
    ```
 
-   1. replace `/path_to_your_script/cddir` to your own script path;
-   2. run `showkey -a` to see the keybinding you want to use to replace `'^[c]'`   (`'^[c]'`  is <kbd>Alt</kbd>-<kbd>c</kbd>). **notice** that if you want to use <kbd>Alt</kbd>-<kbd>c</kbd> , you possibly need to disable the default `fzf` one.
+   1. replace `path_to_your_script/cddir` to your own script path;
+
+   2. run `showkey -a` to see the keybinding you want to use to replace `'\et'`   (`'\et'`  is <kbd>Alt</kbd>-<kbd>c</kbd>). **notice** that if you want to use <kbd>Alt</kbd>-<kbd>c</kbd> , you possibly need to disable the default `fzf` one.
+
+      `cddir.sh`:
+
+      ```shell
+      bindkey '\et' better_alt_c
+      ```
 
 3. update your shell configuration file
 
