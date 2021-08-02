@@ -17,9 +17,8 @@ function fzf-better-alt-c --description "fzf-better-alt-c"
 
 	if test $status = 0
 		cd "$mypath"
-	    commandline -t ""
-        commandline -it -- $prefix
-    end
-
-    commandline -f repaint
+		commandline -t ""
+		commandline -it -- $prefix
+	end
+	commandline -f repaint
 end

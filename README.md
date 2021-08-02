@@ -11,7 +11,9 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 
 ## Usage:
 
-1. Put the script anywhere you want;
+### bash/zsh
+
+1. Download script `fzf-better-alt-c.sh`
 
 2. Add one line in  `.zshrc` for zsh, `.bashrc` for bash;
 
@@ -27,16 +29,36 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 
       ```shell
       bindkey '\et' better_alt_c		(zsh)
-	  bind -x '"\et"':better_alt_c	(bash)
+       bind -x '"\et"':better_alt_c	(bash)
       ```
 
 3. update your shell configuration file
 
    `source .zshrc` for zsh, `source .bashrc` for bash;
 
-I simply add `*` to the front and end string read from `./.ignore` to form patterns, so it **will not** act like `./.gitignore` or `rg` .
+
+
+### fish
+
+1. Download script `fzf-better-alt-c.fish` to `~/.config/fish/function/`
+
+2. run `showkey -a` to see the keybinding you want to use to replace `\ea`   (`\ea`  is <kbd>Alt</kbd>-<kbd>a</kbd>).
+
+   add new line in `~/.config/fish/config.fish`
+
+   ```shell
+   bind  \ea fzf-better-alt-c
+   ```
+
+3. exit to reload fish.
+
+   
 
 ## Note
+
+I simply add `*` to the front and end string read from `./.ignore` to form patterns, so it **will not** act like `./.gitignore` or `rg` .
+
+Also, this script only excludes patterns from current directory rather than scanning for `.ignore` for every directory.
 
 More about the default `FZF_ALT_C_COMMAND`  (part of it)
 
