@@ -1,6 +1,8 @@
 # fzf-better-alt-c
 A script that simulates fzf alt-c excluding directories from `./.ignore`
 
+there is something different for deifferent shells, so this script is only for zsh. You can modified it since it's so easy to fit yours.
+
 ## Intro:
 
 [fzf](https://github.com/junegunn/fzf) uses `find` command to list directories and changes working directory into it.
@@ -11,7 +13,7 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 
 1. Put the script anywhere you want;
 
-2. Add one line in `.bashrc` if you use `bash` or `.zshrc` if you use `zsh` ,etc;
+2. Add one line in  `.zshrc`;
 
    ```shell
    source path_to_script/cddir.sh
@@ -29,7 +31,7 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 
 3. update your shell configuration file
 
-   `source .bashrc` for `bash`, `source .zshrc` for `zsh`, etc.
+   `source .zshrc` for `zsh`;
 
 I simply add `*` to the front and end string read from `./.ignore` to form patterns, so it **will not** act like `./.gitignore` or `rg` .
 

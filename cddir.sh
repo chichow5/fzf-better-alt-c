@@ -15,8 +15,12 @@ function better_alt_c(){
 
 	mypath=$(eval ${find_prefix}${exclude}${find_suffix})
 
-	cd $mypath
+	if (( $? == 0))
+	then
+		cd $mypath
+	fi
 	zle reset-prompt
+
 }
 
 zle -N better_alt_c
