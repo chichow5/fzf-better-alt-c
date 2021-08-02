@@ -13,7 +13,7 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 
 1. Put the script anywhere you want;
 
-2. Add one line in  `.zshrc`;
+2. Add one line in  `.zshrc` for zsh, `.bashrc` for bash;
 
    ```shell
    source path_to_script/cddir.sh
@@ -21,17 +21,18 @@ However, `find` command doesn't have some features like `rg` which reading  igno
 
    1. replace `path_to_your_script/cddir` to your own script path;
 
-   2. run `showkey -a` to see the keybinding you want to use to replace `'\et'`   (`'\et'`  is <kbd>Alt</kbd>-<kbd>c</kbd>). **notice** that if you want to use <kbd>Alt</kbd>-<kbd>c</kbd> , you possibly need to disable the default `fzf` one.
+   2. run `showkey -a` to see the keybinding you want to use to replace `\et`   (`\et`  is <kbd>Alt</kbd>-<kbd>c</kbd>). **notice** that if you want to use <kbd>Alt</kbd>-<kbd>c</kbd> , you possibly need to disable the default `fzf` one.
 
       `cddir.sh`:
 
       ```shell
-      bindkey '\et' better_alt_c
+      bindkey '\et' better_alt_c		(zsh)
+	  bind -x '"\et"':better_alt_c	(bash)
       ```
 
 3. update your shell configuration file
 
-   `source .zshrc` for `zsh`;
+   `source .zshrc` for zsh, `source .bashrc` for bash;
 
 I simply add `*` to the front and end string read from `./.ignore` to form patterns, so it **will not** act like `./.gitignore` or `rg` .
 
